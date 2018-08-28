@@ -1,0 +1,10 @@
+
+node_modules/
+scripts/
+crypto/*.pem
+crypto/*.zip
+.DS_Store
+
+npm-debug.log
+
+config.js
