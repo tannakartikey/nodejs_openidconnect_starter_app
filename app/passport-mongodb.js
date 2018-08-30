@@ -1,7 +1,6 @@
 
-const LocalStrategy = require("passport-local").Strategy;
 const OpenIdConnectStrategy = require("passport-openidconnect").Strategy;
-const User = require("../app/models/user");
+const User = require("../app/models/user-mongodb");
 const config = require("../config");
 
 module.exports = function(passport) {
@@ -25,10 +24,10 @@ module.exports = function(passport) {
       process.nextTick(() => {
 
         if (!req.user) {                                                                                        // if not already logged in, log in ...
-          User.findOne({ "qrypto.id" : profile.id }, (err, user) => {
+          User.findOne({ "qrypto_id" : profile.id }, (err, user) => {
             if (err) return done(err);
             if (user) {
-              user.qrypto.id_token = params.id_token;
+              user.qrypto_id_token = params.id_token;
               user.save(function(err) {
                 if (err) return done(err);
                 return done(null, user);
@@ -36,8 +35,8 @@ module.exports = function(passport) {
             }
             else {
               var newUser = new User();
-              newUser.qrypto.id = profile.id;
-              newUser.qrypto.id_token = params.id_token;
+              newUser.qrypto_id = profile.id;
+              newUser.qrypto_id_token = params.id_token;
               newUser.save(function(err) {
                 if (err) return done(err);
                 return done(null, newUser);
@@ -48,8 +47,8 @@ module.exports = function(passport) {
 
         else {                                                                                                  // ... otherwise (already logged in), link
           var user = req.user;
-          user.qrypto.id = profile.id;
-          user.qrypto.id_token = params.id_token;
+          user.qrypto_id = profile.id;
+          user.qrypto_id_token = params.id_token;
           user.save((err) => {
             if (err) return done(err);
             return done(null, user);

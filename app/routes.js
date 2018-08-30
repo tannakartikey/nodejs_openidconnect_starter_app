@@ -12,7 +12,7 @@ module.exports = function(app, passport) {
   });
 
   app.get("/logout", isLoggedIn, function(req, res) {
-    const id_token_hint = req.user.qrypto.id_token;
+    const id_token_hint = req.user.qrypto_id_token;
     const encodedCallbackUri = encodeURIComponent(config.callbackRoot);
     req.logout();
     req.session.destroy();

@@ -14,12 +14,12 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const session = require("express-session");
 
-
 const config = require("./config");
 
 mongoose.connect(config.mongoUrl, { useMongoClient: true });
 
-require("./app/passport")(passport);
+//require("./app/passport-mongodb")(passport);      // pick one
+require("./app/passport-sqlite")(passport);
 
 app.use(cookieParser());
 app.use(bodyParser.json());
