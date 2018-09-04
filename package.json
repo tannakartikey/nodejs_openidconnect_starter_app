@@ -1,5 +1,8 @@
 {
   "name": "qrypto-initech",
+  "engines": {
+    "node": "10.9"
+  },
   "main": "app.js",
   "dependencies": {
     "bcrypt-nodejs": "latest",
