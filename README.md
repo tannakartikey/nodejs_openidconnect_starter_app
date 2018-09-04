@@ -48,13 +48,19 @@ git config --list | grep heroku
 git push heroku master
 ```
 
-3. Make your code updates in [`app/controllers/openid_controller.rb`](https://github.com/Deauthorized/nodejs_openidconnect_starter_app/blob/master/app/controllers/openid_controller.rb)
+3. Make your code updates in [`config.js`](https://github.com/Deauthorized/nodejs_openidconnect_starter_app/blob/master/config.js)
 
 ```sh
-git add app/controllers/openid_controller.rb
 git commit -m 'small update to sample app'
 git push heroku master
 heroku open
+```
+
+4. Run the app locally with the latest Node Version 10 or higher.
+
+```sh
+npm install
+node app
 ```
 
 ## Documentation
