@@ -1,7 +1,7 @@
 
 const config = {};
 
-config.callbackRoot = "[YOUR ROOT URL, e.g., https://initech.qryp.to:8003]";
+config.callbackRoot = "[YOUR ROOT URL, e.g., http://initech.qryp.to:8003]";
 
 config.opUri = "https://srv.qryp.to";
 

@@ -1,5 +1,5 @@
 
-const https = require("https");
+const http = require("http");
 const path = require("path");
 const fs = require("fs");
 
@@ -38,16 +38,6 @@ app.use(flash());
 
 require("./app/routes.js")(app, passport);
 
-const httpsConfig = {
-  ca: fs.readFileSync(__dirname + "/crypto/ca-crt.pem"),
-	key: fs.readFileSync(__dirname + "/crypto/server-key.pem"),
-	cert: fs.readFileSync(__dirname + "/crypto/server-crt.pem"),
-	honorCipherOrder: true,
-	NPNProtocols: ["http/1.1", "http/1.0"],
-	secureProtocol: "TLSv1_2_method",
-	rejectUnauthorized: false
-};
-
-const hs = https.Server(httpsConfig, app);
+const hs = http.createServer({}, app);
 
 hs.listen(port);
