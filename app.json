@@ -1,0 +1,27 @@
+{
+  "name": "Sample OpenID project",
+  "description": "Sample project connecting to OpenID provider",
+  "repository": "https://github.com/Deauthorized/nodejs_openidconnect_starter_app",
+  "keywords": [
+    "NodeJs",
+    "OpenID Connect Client"
+  ],
+  "env": {
+    "OPENID_CLIENT_ID": {
+      "description": "Client ID registered on OpenID provider"
+    },
+    "OPENID_CLIENT_SECRET": {
+      "description": "Client secret provided from OpenID provider"
+    },
+    "OPENID_HOST": {
+      "description": "OpenID provider hostname"
+    },
+    "OPENID_PORT": {
+      "description": "OpenID provider port number"
+    },
+    "OPENID_ISSUER": {
+      "description": "OpenID issuer URL"
+    }
+  },
+  "image": "heroku/node"
+}
