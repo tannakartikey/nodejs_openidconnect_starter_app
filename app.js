@@ -6,7 +6,6 @@ const fs = require("fs");
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 8003;
-const mongoose = require("mongoose");
 const passport = require("passport");
 const flash = require("connect-flash");
 
@@ -16,7 +15,8 @@ const session = require("express-session");
 
 const config = require("./config");
 
-mongoose.connect(config.mongoUrl, { useMongoClient: true });
+//const mongoose = require("mongoose");
+//mongoose.connect(config.mongoUrl, { useMongoClient: true });
 
 //require("./app/passport-mongodb")(passport);      // pick one
 require("./app/passport-sqlite")(passport);
