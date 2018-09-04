@@ -1,6 +1,6 @@
 const config = {};
 
-config.callbackRoot = "[https:/#{your-app-name}.herokuapp.com/]";
+config.callbackRoot = "[https:/da-nodejs.herokuapp.com/]";
 
 config.opUri = "https://srv.qryp.to";
 
