@@ -1,6 +1,6 @@
 {
-  "name": "Sample OpenID project",
-  "description": "Sample project connecting to OpenID provider",
+  "name": "NodeJS OpenID project",
+  "description": "NodeJS project connecting to OpenID provider",
   "repository": "https://github.com/Deauthorized/nodejs_openidconnect_starter_app",
   "keywords": [
     "NodeJs",

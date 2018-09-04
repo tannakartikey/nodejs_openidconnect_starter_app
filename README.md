@@ -38,7 +38,6 @@ To experiment with making edits to the sample application:
 ```sh
 git clone https://github.com/Deauthorized/nodejs_openidconnect_starter_app
 cd nodejs_openidconnect_starter_app
-bundle install
 ```
 
 2. Create Heroku Application:
@@ -55,7 +54,6 @@ git push heroku master
 git add app/controllers/openid_controller.rb
 git commit -m 'small update to sample app'
 git push heroku master
-heroku run rake db:migrate (if database migration needed)
 heroku open
 ```
 
