@@ -1,6 +1,6 @@
 const config = {};
 
-config.callbackRoot = "https://da-node-test.herokuapp.com/";
+config.callbackRoot = "https://da-node-test.herokuapp.com";
 
 config.opUri = "https://srv.qryp.to";
 
