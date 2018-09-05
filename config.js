@@ -5,8 +5,8 @@ config.callbackRoot = "https://da-node-test.herokuapp.com/";
 config.opUri = "https://srv.qryp.to";
 
 config.qryptoAuth = {
-  clientID: "0474a72a-3a58-482c-89bb-e1f6bcd4e7cb",
-  clientSecret: "5J3m572iiRDAnnZjLT4uRLWS4vyjeEW3k1YHu9K+0VZmIq5on21bAabJVKZkof9t",
+  clientID: "4a96df5a-0663-4cde-b536-048ac9b32c3a",
+  clientSecret: "Z0pUcXlkbSSpPv9opgLxVPKcyEIZ/iYLnHdcVsISyQ1p6ZzO/yqmJCL3a4cHMdUM",
   authorizationURL: `${config.opUri}/op/auth`,
   tokenURL: `${config.opUri}/op/token`,
   userInfoURL: `${config.opUri}/op/me`,
