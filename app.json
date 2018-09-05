@@ -21,6 +21,9 @@
     },
     "OPENID_ISSUER": {
       "description": "OpenID issuer URL"
+    },
+    "DOMAIN_URL": {
+      "description": "The domain url for your app."
     }
   },
   "image": "heroku/node"

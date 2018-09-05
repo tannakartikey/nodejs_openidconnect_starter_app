@@ -1,12 +1,12 @@
 const config = {};
 
-config.callbackRoot = "https://da-node-test.herokuapp.com";
+config.callbackRoot = process.env.DOMAIN_URL;
 
-config.opUri = "https://srv.qryp.to";
+config.opUri = process.env.OPENID_HOST;
 
 config.qryptoAuth = {
-  clientID: "4a96df5a-0663-4cde-b536-048ac9b32c3a",
-  clientSecret: "Z0pUcXlkbSSpPv9opgLxVPKcyEIZ/iYLnHdcVsISyQ1p6ZzO/yqmJCL3a4cHMdUM",
+  clientID: process.env.OPENID_CLIENT_ID,
+  clientSecret: process.env.OPENID_CLIENT_SECRET,
   authorizationURL: `${config.opUri}/op/auth`,
   tokenURL: `${config.opUri}/op/token`,
   userInfoURL: `${config.opUri}/op/me`,
