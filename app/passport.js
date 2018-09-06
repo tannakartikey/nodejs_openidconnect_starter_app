@@ -1,6 +1,6 @@
 
 const OpenIdConnectStrategy = require("passport-openidconnect").Strategy;
-const User = require("../app/models/user-sqlite");
+const User = require("../app/models/user");
 const config = require("../config");
 
 module.exports = function(passport) {
