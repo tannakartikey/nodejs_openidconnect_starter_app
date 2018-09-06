@@ -17,6 +17,4 @@ config.qryptoAuth = {
   passReqToCallback : true
 };
 
-config.mongoUrl = "[YOUR MongoDB connection URL]";
-
 module.exports = config;

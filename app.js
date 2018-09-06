@@ -15,10 +15,6 @@ const session = require("express-session");
 
 const config = require("./config");
 
-//const mongoose = require("mongoose");
-//mongoose.connect(config.mongoUrl, { useMongoClient: true });
-
-//require("./app/passport-mongodb")(passport);      // pick one
 require("./app/passport-sqlite")(passport);
 
 app.use(cookieParser());
