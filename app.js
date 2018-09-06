@@ -1,19 +1,14 @@
 
 const http = require("http");
-const path = require("path");
-const fs = require("fs");
-
-const express = require("express");
-const app = express();
-const port = process.env.PORT || 8003;
+const app = require("express")();
 const passport = require("passport");
 const flash = require("connect-flash");
-
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const session = require("express-session");
 
 const config = require("./config");
+const port = process.env.PORT || 8003;
 
 require("./app/passport")(passport);
 

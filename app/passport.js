@@ -3,13 +3,13 @@ const OpenIdConnectStrategy = require("passport-openidconnect").Strategy;
 const User = require("../app/models/user");
 const config = require("../config");
 
-module.exports = function(passport) {
+module.exports = (passport) => {
 
-  passport.serializeUser(function(user, done) {
+  passport.serializeUser((user, done) => {
     done(null, user.id);
   });
 
-  passport.deserializeUser(function(id, done) {
+  passport.deserializeUser((id, done) => {
     User
       .findById(id)
       .then(user => done(null, user))
