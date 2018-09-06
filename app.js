@@ -15,7 +15,7 @@ const session = require("express-session");
 
 const config = require("./config");
 
-require("./app/passport-sqlite")(passport);
+require("./app/passport")(passport);
 
 app.use(cookieParser());
 app.use(bodyParser.json());
