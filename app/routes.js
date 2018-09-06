@@ -11,9 +11,10 @@ module.exports = (app, passport) => {
     res.render("profile.ejs", { user : req.user });
   });
 
-  app.get("/logout", isLoggedIn, function(req, res) {
+  app.get("/logout", isLoggedIn, async (req, res) => {
     const id_token_hint = req.user.qrypto_id_token;
     const encodedCallbackUri = encodeURIComponent(config.callbackRoot);
+    await req.user.update({ qrypto_id_token: null });
     req.logout();
     req.session.destroy();
     res.redirect(`${config.opUri}/op/session/end?post_logout_redirect_uri=${encodedCallbackUri}&id_token_hint=${id_token_hint}`);    // trailing / causes issues when there are additional parameters (?)

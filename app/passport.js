@@ -22,33 +22,14 @@ module.exports = (passport) => {
     config.qryptoAuth,
 
     (req, iss, sub, profile, jwtClaims, accessToken, refreshToken, params, done) => {
-
-      process.nextTick(() => {
-
-        if (!req.user) {                                                                   // if not already logged in, log in ...
-          User
-            .findOrCreate({ where: { qrypto_id: profile.id }, defaults: { qrypto_id_token: params.id_token }})
-            .then(result => {
-              return done(null, result[0]);
-            })
-            .catch(error => {
-              return done(err);
-            })
-          ;
-        }
-/*
-        else {
-          const user = req.user;
-          user.qrypto_id_token = params.id_token
-          user
-            .save({ fields: [ "qrypto_id_token" ] })
-            .then(() => done(null, user))
-            .catch((error) => done(error))
-          ;
-        }
-*/
+      process.nextTick(async () => {
+        const user = (!req.user) ? (await User.findOrCreate({ where: { qrypto_id: profile.id }}))[0] : req.user;
+        user
+          .update({ qrypto_id_token: params.id_token })
+          .then(() => done(null, user))
+          .catch((error) => done(error))
+        ;
       });
-
     }
 
   ));
