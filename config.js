@@ -2,7 +2,7 @@ const config = {};
 
 config.callbackRoot = process.env.DOMAIN_URL;
 
-config.opUri = process.env.OPENID_HOST;
+config.opUri = process.env.OPENID_PROVIDER_URL;
 
 config.qryptoAuth = {
   clientID: process.env.OPENID_CLIENT_ID,
