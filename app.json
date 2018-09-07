@@ -13,12 +13,6 @@
     "OPENID_CLIENT_SECRET": {
       "description": "Client secret provided from OpenID provider"
     },
-    "OPENID_PROVIDER_URL": {
-      "description": "OpenID provider URL"
-    },
-    "OPENID_PORT": {
-      "description": "OpenID provider port number"
-    },
     "OPENID_ISSUER": {
       "description": "OpenID issuer URL"
     },

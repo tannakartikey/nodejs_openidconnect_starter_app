@@ -1,21 +1,33 @@
+
+const crypto = require("crypto");
+
 const config = {};
 
 config.callbackRoot = process.env.DOMAIN_URL;
 
-config.opUri = process.env.OPENID_PROVIDER_URL;
+config.issuer = process.env.OPENID_ISSUER;
+
+config.client = {
+  id: process.env.OPENID_CLIENT_ID,
+  secret: process.env.OPENID_CLIENT_SECRET,
+  redirectURIs: [ `${config.callbackRoot}/auth/qrypto/callback` ]
+}
 
 config.qryptoAuth = {
-  clientID: process.env.OPENID_CLIENT_ID,
-  clientSecret: process.env.OPENID_CLIENT_SECRET,
+  issuer: config.issuer,
+/*
+  clientID: config.client.id,
+  clientSecret: config.client.secret,
+  callbackURL: config.client.redirectURIs[0],
   authorizationURL: `${config.opUri}/op/auth`,
   tokenURL: `${config.opUri}/op/token`,
   userInfoURL: `${config.opUri}/op/me`,
-  callbackURL: `${config.callbackRoot}/auth/qrypto/callback`,
+*/
+  sessionKey: crypto.randomBytes(32).toString("hex"),
+  resolver: { resolve: (identifier, callback) => callback(null, "https://srv.qryp.to/op")},
+  registrar: { resolve: (identifier, callback) => callback(null, config.client)},
   skipUserProfile: false,
-  issuer: `${config.opUri}/op`,
   passReqToCallback: true
 };
-
-config.mongoUrl = "[YOUR MongoDB connection URL]";
 
 module.exports = config;
