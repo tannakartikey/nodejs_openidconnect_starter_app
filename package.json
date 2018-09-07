@@ -1,5 +1,12 @@
 {
-  "name": "qrypto-initech",
+  "name": "nodejs-openid-project",
+  "description": "Node project connecting to OpenID provider",
+  "repository": "https://github.com/Deauthorized/nodejs_openidconnect_starter_app",
+  "keywords": [
+    "NodeJS",
+    "Express",
+    "OpenID Connect Client"
+  ],
   "engines": {
     "node": "10.9"
   },
