@@ -14,7 +14,7 @@ With your application provisioned, you will have the necessary `OPENID_CLIENT_ID
 ```sh
 OPENID_CLIENT_ID: 0d2ee26a-e0d6-4b91-aded-1ef0618f62c2 
 OPENID_CLIENT_SECRET: dvEJSuG3Y8DYS/hcaxEKigYK25WeYCOgxCJLDH3EpH/vUI1X1hzSErDlNfLID9aP  
-OPENID_HOST: srv.qryp.to
+OPENID_PROVIDER_URL: https://srv.qryp.to
 OPENID_ISSUER: https://srv.qryp.to/op
 OPENID_ISSUER: 443
 DOMAIN_URL: https://nodejs-sample.herokuapp.com

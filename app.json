@@ -13,8 +13,8 @@
     "OPENID_CLIENT_SECRET": {
       "description": "Client secret provided from OpenID provider"
     },
-    "OPENID_HOST": {
-      "description": "OpenID provider hostname"
+    "OPENID_PROVIDER_URL": {
+      "description": "OpenID provider URL"
     },
     "OPENID_PORT": {
       "description": "OpenID provider port number"
