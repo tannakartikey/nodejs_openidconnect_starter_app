@@ -24,7 +24,7 @@ config.qryptoAuth = {
   userInfoURL: `${config.opUri}/op/me`,
 */
   sessionKey: crypto.randomBytes(32).toString("hex"),
-  resolver: { resolve: (identifier, callback) => callback(null, "https://srv.qryp.to/op")},
+  resolver: { resolve: (identifier, callback) => callback(null, config.issuer)},
   registrar: { resolve: (identifier, callback) => callback(null, config.client)},
   skipUserProfile: false,
   passReqToCallback: true
