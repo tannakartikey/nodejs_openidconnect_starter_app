@@ -1,12 +1,12 @@
-# NodeJS + Express OpenID Connect with Deauthorized server
+# NodeJS + Express OpenID Connect with Ultra Auth server
 
 - This is a sample NodeJS app that uses OpenID Connect with the Deauthorized identity server.
 - This app also serves as a basic blueprint for intergation with your apps for development.  
 
-## Create a Deauthorized Application
+## Create a Ultra Auth Application
 
-1. Sign up for the [`Deauthorized Private Beta`](https://www.deauthorized.com/beta_invite)
-2. Log into Deauthorized Dashboard
+1. Sign up for the [`Ultra Auth Private Beta`](https://www.deauthorized.com/beta_invite)
+2. Log into Ultra Auth Dashboard
 3. Create a new application from the Create Applications tab
 
 With your application provisioned, you will have the necessary `OPENID_CLIENT_ID` and `OPENID_CLIENT_SECRET` to launch the sample application. Here is an example setup for your Heroku ENV:
@@ -24,9 +24,9 @@ Heroku is the fastest way to get the sample app running.
 
 ### Single Click Heroku Deployment
 
-1. Deploy by clicking button below:<br/><br/>[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Deauthorized/nodejs_openidconnect_starter_app)
+1. Deploy by clicking button below:<br/><br/>[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/UltraAuth/nodejs_openidconnect_starter_app)
 
-2. Update `OPENID_CLIENT_ID` and `OPENID_CLIENT_SECRET` environment vars with you with those you provisioned in the Deauthorized dashboard.
+2. Update `OPENID_CLIENT_ID` and `OPENID_CLIENT_SECRET` environment vars with you with those you provisioned in the Ultra Auth dashboard.
 
 ### Manual Heroku Deployment
 
@@ -35,7 +35,7 @@ To experiment with making edits to the sample application:
 1. Clone sample application locally
 
 ```sh
-git clone https://github.com/Deauthorized/nodejs_openidconnect_starter_app
+git clone https://github.com/UltraAuth/nodejs_openidconnect_starter_app
 cd nodejs_openidconnect_starter_app
 ```
 
@@ -47,7 +47,7 @@ git config --list | grep heroku
 git push heroku master
 ```
 
-3. Make your code updates in [`config.js`](https://github.com/Deauthorized/nodejs_openidconnect_starter_app/blob/master/config.js)
+3. Make your code updates in [`config.js`](https://github.com/UltraAuth/nodejs_openidconnect_starter_app/blob/master/config.js)
 
 ```sh
 git commit -m 'small update to sample app'
@@ -64,4 +64,4 @@ node app
 
 ## Documentation
 
-For more information on using Deauthorized's biometric authentication solutions, [visit our website](https://www.deauthorized.com)
+For more information on using Ultra Auth's biometric authentication solutions, [visit our website](https://www.deauthorized.com)
