@@ -4,6 +4,7 @@ scripts/
 crypto/*.pem
 crypto/*.zip
 .DS_Store
+.idea/*
 
 npm-debug.log
 
