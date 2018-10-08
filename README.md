@@ -1,11 +1,11 @@
 # NodeJS + Express OpenID Connect with Ultra Auth server
 
-- This is a sample NodeJS app that uses OpenID Connect with the Deauthorized identity server.
-- This app also serves as a basic blueprint for intergation with your apps for development.  
+- This is a sample NodeJS app that uses OpenID Connect with the Ultra Auth identity server.
+- This app also serves as a basic blueprint for interaction with your apps for development.  
 
 ## Create a Ultra Auth Application
 
-1. Sign up for the [`Ultra Auth Private Beta`](https://www.deauthorized.com/beta_invite)
+1. Sign up for [`Ultra Auth`](https://www.ultraauth.com/users/sign_up)
 2. Log into Ultra Auth Dashboard
 3. Create a new application from the Create Applications tab
 
@@ -64,4 +64,4 @@ node app
 
 ## Documentation
 
-For more information on using Ultra Auth's biometric authentication solutions, [visit our website](https://www.deauthorized.com)
+For more information on using Ultra Auth's biometric authentication solutions, [visit our website](https://www.ultraauth.com)
