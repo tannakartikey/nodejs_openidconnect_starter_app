@@ -1,5 +1,5 @@
 
-const OpenIdConnectStrategy = require("passport-openidconnect").Strategy;
+const OpenIdConnectStrategy = require("passport-ultraauth").Strategy;
 const User = require("../app/models/user");
 const config = require("../config");
 
@@ -19,7 +19,7 @@ module.exports = (passport) => {
 
   passport.use(new OpenIdConnectStrategy(
 
-    config.qryptoAuth,
+    config.client,
 
     (req, iss, sub, profile, jwtClaims, accessToken, refreshToken, params, done) => {
       process.nextTick(async () => {
