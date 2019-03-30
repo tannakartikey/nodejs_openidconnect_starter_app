@@ -17,7 +17,7 @@ module.exports = (app, passport) => {
     await req.user.update({ qrypto_id_token: null });
     req.logout();
     req.session.destroy();
-    res.redirect(`${config.issuer}/session/end?post_logout_redirect_uri=${encodedCallbackUri}&id_token_hint=${id_token_hint}`);    // trailing / causes issues when there are additional parameters (?)
+    res.redirect(`https://srv.qryp.to/op/session/end?post_logout_redirect_uri=${encodedCallbackUri}&id_token_hint=${id_token_hint}`);    // trailing / causes issues when there are additional parameters (?)
   });
 
   app.get("/auth/qrypto", passport.authenticate("openidconnect", { scope : ["profile", "email"] }));
